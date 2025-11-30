@@ -1,0 +1,21 @@
+{
+  "name": "greeting-card-generator-node-js-version",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/genai": "^1.30.0",
+    "boxen": "^8.0.1",
+    "chalk": "^5.6.2",
+    "dotenv": "^17.2.3",
+    "puppeteer": "^24.31.0",
+    "readline-sync": "^1.4.10"
+  }
+}

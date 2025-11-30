@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Pop Birthday</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['"Anton"', 'sans-serif'],
+                        'body': ['"Space Grotesk"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        // The signature "hard" shadow
+                        'hard': '8px 8px 0px 0px rgba(0,0,0,1)', 
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-indigo-600 min-h-screen flex items-center justify-center p-6">
+
+    <div id="card" class="bg-yellow-400 w-full max-w-sm border-4 border-black shadow-hard p-6 relative">
+        
+        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-white/40 rotate-1 border border-black/10"></div>
+
+        <div class="border-4 border-black bg-white mb-6 rotate-1 hover:-rotate-1 transition-transform duration-300">
+            <img src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                 alt="Party" 
+                 class="w-full h-64 object-cover p-2">
+        </div>
+
+        <div class="text-center">
+            <h1 class="font-display text-6xl text-black uppercase leading-none mb-2">
+                LEVEL<br><span class="text-white text-stroke">UP!</span>
+            </h1>
+            
+            <div class="bg-white border-2 border-black p-4 mt-4 transform -rotate-1">
+                <p class="font-body font-bold text-lg">HEY ALEX,</p>
+                <p class="font-body text-sm mt-2">
+                    Another year older, but still the coolest person in the room. Have a blast!
+                </p>
+            </div>
+
+            <button class="mt-6 bg-black text-white font-display text-xl tracking-wide py-3 px-8 border-2 border-transparent hover:bg-white hover:text-black hover:border-black transition-colors w-full">
+                CELEBRATE
+            </button>
+        </div>
+    </div>
+
+    <style>
+        /* Adds a black outline to the white text */
+        .text-stroke {
+            -webkit-text-stroke: 2px black;
+        }
+    </style>
+</body>
+</html>
