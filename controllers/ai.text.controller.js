@@ -1,8 +1,10 @@
 import { GoogleGenAI } from "@google/genai";
+import { configDotenv } from "dotenv";
+configDotenv();
 
 // ⚠️ SECURITY WARNING: Never hardcode API keys in client-side code or public repos.
 // Use environment variables (process.env.GEMINI_API_KEY) instead.
-const ai = new GoogleGenAI({ apiKey: "AIzaSyCRk5MCzVGBUg8udLrTy9-9KyiALWol25w" });
+const ai = new GoogleGenAI({apiKey: process.env.GOOGLE_API_KEY});
 
 async function aiGenerateGreeting(name, bname, dob) {
   const prompt = `
