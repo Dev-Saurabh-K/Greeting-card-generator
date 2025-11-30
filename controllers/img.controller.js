@@ -1,6 +1,6 @@
 import puppeteer from "puppeteer";
 
-async function htmlToImage(name, bname, dob ,design) {
+async function htmlToImage(name, bname, dob ,design, i) {
   const browser = await puppeteer.launch({
     headless: "new",
   });
@@ -8,7 +8,7 @@ async function htmlToImage(name, bname, dob ,design) {
   const page = await browser.newPage();
 
 
-  await page.setContent(design(name,bname,dob), { waitUntil: "networkidle0" });
+  await page.setContent(design(name,bname,dob), { waitUntil: "domcontentloaded" });
 
   // await page.screenshot({
   //   path: 'output.png',
@@ -17,7 +17,7 @@ async function htmlToImage(name, bname, dob ,design) {
   const element = await page.$("#card");
 
   await element.screenshot({
-    path: `card_${bname}.png`,
+    path: `card_${bname}_${i}.png`,
     type: "png",
   });
 

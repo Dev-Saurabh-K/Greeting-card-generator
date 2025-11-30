@@ -19,7 +19,8 @@ const designs = {
 };
 
 // console.log(designs[1]);
-while (true) {
+var i=0
+while (i<100) {
   let index = readline.question(
     "-----Designs Available:-----\n1.normal\n2.nelegantDarkLuxury\n3.softGlassmorphism\n4.retroPopBrutalist\n5.bohoArch\n\n\nType Design Index to continue..."
   );
@@ -30,7 +31,7 @@ while (true) {
     console.log("Fill details about Bithday Boy...");
     let bname = readline.question("Enter Name: ");
     let dob = readline.question("Enter dd/mm/yyyy");
-    htmlToImage(name, bname, dob, designs[index]);
+    htmlToImage(name, bname, dob, designs[index], i);
     break;
   } else {
     console.log("Invalid Input! Try Again.....");
