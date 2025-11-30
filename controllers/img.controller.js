@@ -1,13 +1,6 @@
 import puppeteer from "puppeteer";
-import {
-  normal,
-  elegantDarkLuxury,
-  softGlassmorphism,
-  retroPopBrutalist,
-  bohoArch,
-} from "../templates/img.template.js";
 
-async function htmlToImage() {
+async function htmlToImage(name, bname, dob ,design) {
   const browser = await puppeteer.launch({
     headless: "new",
   });
@@ -88,7 +81,7 @@ async function htmlToImage() {
 </html>
   `;
 
-  await page.setContent(elegantDarkLuxury, { waitUntil: "networkidle0" });
+  await page.setContent(design(name,bname,dob), { waitUntil: "networkidle0" });
 
   // await page.screenshot({
   //   path: 'output.png',

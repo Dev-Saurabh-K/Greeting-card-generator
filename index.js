@@ -1,14 +1,19 @@
+import { normal,
+  elegantDarkLuxury,
+  softGlassmorphism,
+  retroPopBrutalist,
+  bohoArch, } from "./templates/img.template.js";
 
 import { htmlToImage } from "./controllers/img.controller.js";
 
 import readline from "readline-sync";
 
 const designs={
-    1:"normal",
-    2:"nelegantDarkLuxury",
-    3:"softGlassmorphism",
-    4:"retroPopBrutalist",
-    5:"bohoArch",
+    1:normal,
+    2:elegantDarkLuxury,
+    3:softGlassmorphism,
+    4:retroPopBrutalist,
+    5:bohoArch,
 }
 
 // console.log(designs[1]);
@@ -23,4 +28,4 @@ let dob=readline.question("Enter dd/mm/yyyy");
 
 
 
-htmlToImage();
+htmlToImage(name,bname,dob,designs[index]);
